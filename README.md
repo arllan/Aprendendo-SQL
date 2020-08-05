@@ -1,5 +1,6 @@
 # Aprendendo-SQL
-Diretorio para fins educacionais
+Diretorio para fins educacionais. Neste diretorio vocês vão encontrar todos os comandos utilizados na aula de select do curso em vídeo.
+
 
 ## Aula Select - 01
 [![Watch the video](https://raw.githubusercontent.com/arllan/Aprendendo-SQL/master/curso_em_video_aula_select_1_2.PNG)](https://bit.ly/3kdzyBb)
