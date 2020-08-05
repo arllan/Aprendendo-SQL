@@ -1,8 +1,13 @@
 # Aprendendo-SQL
 Diretorio para fins educacionais
 
+## Aula Select - 01
+[![Watch the video](https://raw.githubusercontent.com/arllan/Aprendendo-SQL/master/curso_em_video_aula_select_1_2.PNG)](https://bit.ly/3kdzyBb)
 
-                    
+
+
+## Aula Select - 02
+[![Watch the video](https://raw.githubusercontent.com/arllan/Aprendendo-SQL/master/curso_em_video_aula_select_1_2.PNG)](https://bit.ly/30w3wZv)
 
 
 | COMANDO  | DESCRIÇÃO DO COMANDO | 
