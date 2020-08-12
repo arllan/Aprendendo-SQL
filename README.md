@@ -50,4 +50,84 @@ Diretorio para fins educacionais. Neste diretorio vocês vão encontrar todos os
 |select min(carga) from cursos where ano = '2016' ;| /* Retorna o menor valor que foi cadastrado na coluna carga e ainda com condição de selecionar o ano*/|
 |select sum(carga) from cursos where ano = '2016';|/* esse comando soma de todas as tuplas de todos os cursos cadastrados a 'carga' e mostra o valor total que neste caso e: 170*/|
 |select avg(carga) from cursos where ano = '2016';|/* esse comando retira a media de todas as tuplas de todos os cursos e tira a media de 'carga' e mostra o resultado*/ |
- 
+
+
+## Aula 04 - Manipulando e alterando colunas, bancos e tabelas.
+
+| COMANDO  | DESCRIÇÃO DO COMANDO | 
+| :------------ |:---------------:|
+|create database curso default character set utf8 default collate utf8_general_ci;|estrutura para criar o banco com formulação de caracteres do padrão utf8 "sulamericano de acentuação|
+|describe pessoas;|Mostrar a estrutura do banco de dados|
+|alter table pessoas add column profissao varchar(10);|adicionar uma coluna na tabela já criada|
+|alter table pessoas modify column profissao varchar(50);|Modifica uma 'CONSTRAINTS' de um campo já existente do banco de dados obs: apenas modifica a propriedade de uma coluna|
+|alter table pessoas change column profissao novoProfissao varchar(30);| Altera o nome de uma coluna e seus 'CONSTRAINTS' obs: esse comando só deve ser utilizado quando for modificar o nome da coluna. Se for apenas modificar alguma constrains utilize o comando 'column|
+|alter table pessoas drop column profissao;| Apagar uma coluna do banco de dados|
+|alter table pessoas rename to gafanhotos ;|Altera o nome da tabela. Precisa colocar o nome antigo e o novo como está descrito no comando|
+
+```sql
+create database curso default character set utf8 default collate utf8_general_ci;
+
+use curso ;
+
+CREATE TABLE pessoas (
+	id int not null auto_increment primary key,
+	nome varchar(30) NOT NULL,
+    nascimento date,
+    sexo enum('M','F'),
+    peso decimal(5,2),
+    altura decimal(3,2),
+    nacionalidade varchar(20) default 'Brasil'
+) DEFAULT CHARSET = utf8;
+```
+ ## Aula 05 - Utilizando 'CONSTRAINTS' - São elementos complementares que sempre tem o papel de completar outro comando.
+
+| COMANDO  | DESCRIÇÃO DO COMANDO | 
+| :------------ |:---------------:|
+|NOT NULL|informa que o campo não pode ficar sem nenhuma informação e assim obriga adicionar algum conteudo ao ser criado|
+|DEFAULT|Se caso nenhum 'informação' for adicionado ao campo ele vai assumir um valor padrão que deve esta em spas|
+|ENUM('elementoA','elementoB','elementoC')|Limita receber apenas um dos elementos, que são listados dentro do comando|
+|UNIQUE|quando adicionado esse campo em uma coluna limita que esse campo seja unico e que nenhuma outra tupla tenha a mesma informação desse campo|
+
+
+## Aula 06 - Tipos de variaveis
+
+### Variavel do tipo inteiro
+- Inteiro
+   * Int
+   * BigInt
+   * MediumInt
+   * SmallInt
+- Real
+   * Decimal
+   * Float
+   * Double
+   * Real
+- Lógico
+   * Bit
+   * Boolean
+   
+### Variavel do tipo time/date
+- Data/Tempo
+		* Date
+  * dateTime
+  * TimeStamp
+  * Time
+  * year
+
+### Variavel do tipo Literal
+
+- Caractere
+		* Char
+  * VarChar
+- Texto
+		* TinyText
+  * Text
+  * LongText
+- Binário
+		* TinyBlob
+  * Blob
+  * MediumBlob
+  * LongBlob
+- Coleção
+		* Enum
+  * Set
